@@ -604,47 +604,30 @@ function setupAutoplay(){
    needsCheck: true -> affiche un tag "à vérifier" (relevé vs compo, etc.)
    ========================================================= */
 const SESSIONS = [
-  {
-    category: "releves-jazz",
-    title: "Hot House",
-    platform: "facebook",
-    url: "https://www.facebook.com/mathieu.verlot/videos/1197372813746254/",
-    note: "Travail d'attaque, précision et phrasé sur le standard bebop — à l'archet et en pizzicato.",
-    sourceLabel: "via twitter.com/MathieuVerlot, 7 déc. 2018",
-    sourceLink: "https://twitter.com/MathieuVerlot"
-  },
-  {
-    category: "releves-jazz",
-    title: "Jaco's Celebration: Continuum (avec Gertrude)",
-    platform: "pending",
-    note: "Relevé du « Continuum » de Jaco Pastorius, joué avec Gertrude (sa contrebasse).",
-    sourceLabel: "Google+, 14 nov. 2016",
-    sourceLink: "https://plus.google.com/103802783015283473575/posts"
-  },
-  {
-    category: "releves-jazz",
-    title: "Bob Berg's Glasses (bowed live transcription)",
-    platform: "pending",
-    note: "Transcription jouée à l'archet, en direct.",
-    sourceLabel: "Google+, 14 nov. 2016",
-    sourceLink: "https://plus.google.com/103802783015283473575/posts"
-  },
-  {
-    category: "releves-jazz",
-    title: "Timothée — relevé du solo de Biréli Lagrène",
-    platform: "pending",
-    note: "Relevé d'un solo du guitariste Biréli Lagrène.",
-    sourceLabel: "Google+, 14 nov. 2016",
-    sourceLink: "https://plus.google.com/103802783015283473575/posts"
-  },
-  {
-    category: "releves-jazz",
-    title: "Snorkeling In The Giant Steps (2014)",
-    platform: "pending",
-    note: "Travail sur la grille de « Giant Steps » (Coltrane).",
-    sourceLabel: "Google+, 2014 / republié 14 nov. 2016",
-    sourceLink: "https://plus.google.com/103802783015283473575/posts"
-  },
+  // ── RELEVÉS JAZZ ── 18 vidéos de la playlist YouTube (titres à compléter)
+  { category:"releves-jazz", title:"Relevé jazz 01 — titre à compléter", platform:"youtube", id:"CoiYVEHU2to", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 02 — titre à compléter", platform:"youtube", id:"uHQSFiSTkHM", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 03 — titre à compléter", platform:"youtube", id:"7nAQFAXHHEM", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 04 — titre à compléter", platform:"youtube", id:"vYBDDYU5Tuw", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 05 — titre à compléter", platform:"youtube", id:"AkSszIhIaIg", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 06 — titre à compléter", platform:"youtube", id:"5LREJGEJDsw", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 07 — titre à compléter", platform:"youtube", id:"ny6LQcOTxbc", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 08 — titre à compléter", platform:"youtube", id:"rgni9up2k8M", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 09 — titre à compléter", platform:"youtube", id:"GugdLBxrzI0", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 10 — titre à compléter", platform:"youtube", id:"D3tJ4SqEd6Q", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 11 — titre à compléter", platform:"youtube", id:"GWj1D7XYs4U", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 12 — titre à compléter", platform:"youtube", id:"90c16A8IBmk", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 13 — titre à compléter", platform:"youtube", id:"x7e5_5YQW_8", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 14 — titre à compléter", platform:"youtube", id:"lidjpWlfu44", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 15 — titre à compléter", platform:"youtube", id:"GRGoNaLiSE4", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 16 — titre à compléter", platform:"youtube", id:"euL5Mg9v_8Q", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Relevé jazz 17 — titre à compléter", platform:"youtube", id:"ylDodhWbumE", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Hot House (Facebook)", platform:"facebook", url:"https://www.facebook.com/mathieu.verlot/videos/1197372813746254/", note:"À l'archet et en pizzicato.", sourceLabel:"via twitter.com/MathieuVerlot", sourceLink:"https://twitter.com/MathieuVerlot" },
+  { category:"releves-jazz", title:"Relevé jazz 18 — titre à compléter", platform:"youtube", id:"IWd9jHBwHG4", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"releves-jazz", title:"Jaco's Celebration: Continuum", platform:"pending", note:"Relevé du « Continuum » de Jaco Pastorius.", sourceLabel:"Google+, nov. 2016", sourceLink:"https://plus.google.com/103802783015283473575/posts" },
+  { category:"releves-jazz", title:"Bob Berg's Glasses (bowed live transcription)", platform:"pending", note:"Transcription jouée à l'archet, en direct.", sourceLabel:"Google+, nov. 2016", sourceLink:"https://plus.google.com/103802783015283473575/posts" },
+  { category:"releves-jazz", title:"Timothée — relevé du solo de Biréli Lagrène", platform:"pending", note:"", sourceLabel:"Google+, nov. 2016", sourceLink:"https://plus.google.com/103802783015283473575/posts" },
+  { category:"releves-jazz", title:"Snorkeling In The Giant Steps (2014)", platform:"pending", note:"Sur la grille de « Giant Steps » (Coltrane).", sourceLabel:"Google+, 2014", sourceLink:"https://plus.google.com/103802783015283473575/posts" },
 
   {
     category: "releves-classique",
