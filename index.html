@@ -170,8 +170,9 @@
     background:rgba(33,19,9,0.96);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--rule);
-    display:flex; gap:0; overflow-x:auto;
-    padding:0 6vw;
+    display:flex; gap:0;
+    overflow-x:auto;
+    padding:0;
     scrollbar-width:none;
   }
   nav.tabs::-webkit-scrollbar{display:none;}
@@ -179,16 +180,18 @@
     appearance:none; background:none; border:none;
     font-family:'JetBrains Mono',monospace;
     color:var(--cream-dim);
-    font-size:0.82rem;
-    letter-spacing:0.06em;
+    font-size:0.68rem;
+    letter-spacing:0.04em;
     text-transform:uppercase;
-    padding:1.1rem 1.3rem;
+    padding:0.85rem 0.7rem;
     cursor:pointer;
     white-space:nowrap;
     border-bottom:2px solid transparent;
     transition:color 0.2s, border-color 0.2s;
+    flex:1 1 0;
+    text-align:center;
   }
-  nav.tabs button .idx{color:var(--amber); margin-right:0.5em; opacity:0.7;}
+  nav.tabs button .idx{display:none;}
   nav.tabs button:hover{color:var(--cream);}
   nav.tabs button:focus-visible{outline:2px solid var(--amber-bright); outline-offset:2px;}
   nav.tabs button.active{color:var(--cream); border-color:var(--amber-bright);}
