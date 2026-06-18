@@ -341,9 +341,10 @@
   <button data-tab="releves-rock"><span class="idx">03</span>Relevés Rock</button>
   <button data-tab="releves-autres"><span class="idx">04</span>Relevés Autres</button>
   <button data-tab="compos"><span class="idx">05</span>Compos</button>
-  <button data-tab="creations"><span class="idx">06</span>Créations Graphiques</button>
-  <button data-tab="boutique"><span class="idx">07</span>Boutique</button>
-  <button data-tab="bio"><span class="idx">08</span>Bio</button>
+  <button data-tab="openings"><span class="idx">06</span>Openings</button>
+  <button data-tab="creations"><span class="idx">07</span>Créations Graphiques</button>
+  <button data-tab="boutique"><span class="idx">08</span>Boutique</button>
+  <button data-tab="bio"><span class="idx">09</span>Bio</button>
 </nav>
 
 <main>
@@ -409,6 +410,20 @@
       <div>
         <h4>Ajouter une composition</h4>
         <p>Catégorie <code>"compos"</code> dans le tableau <code>SESSIONS</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENINGS -->
+  <section class="panel" id="panel-openings">
+    <div class="panel-head"><h2>Openings</h2><span class="count" id="count-openings"></span></div>
+    <p class="panel-note">Génériques et thèmes d'ouverture — anime, séries, films — transcrits à la contrebasse. Titres à compléter.</p>
+    <div id="list-openings"></div>
+    <div class="ghost-session">
+      <div class="no">+</div>
+      <div>
+        <h4>Ajouter un opening</h4>
+        <p>Catégorie <code>"openings"</code> dans le tableau <code>SESSIONS</code>.</p>
       </div>
     </div>
   </section>
@@ -676,6 +691,14 @@ const SESSIONS = [
   },
 
 
+  // ── OPENINGS ── 6 vidéos YouTube
+  { category:"openings", title:"Opening 01 — titre à compléter", platform:"youtube", id:"giY9sMombtE", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"openings", title:"Opening 02 — titre à compléter", platform:"youtube", id:"VwSth79JuSw", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"openings", title:"Opening 03 — titre à compléter", platform:"youtube", id:"k0IlBrMiufg", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"openings", title:"Opening 04 — titre à compléter", platform:"youtube", id:"qRHcQ1R4rtw", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"openings", title:"Opening 05 — titre à compléter", platform:"youtube", id:"vYrbHvYH4zk", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+  { category:"openings", title:"Opening 06 — titre à compléter", platform:"youtube", id:"oSj3bruUMvo", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
+
   // ── COMPOSITIONS ORIGINALES ── 6 vidéos YouTube
   { category:"compos", title:"Composition 01 — titre à compléter", platform:"youtube", id:"T8r44GN2f5w", note:"", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
   { category:"compos", title:"Un Père et Basse", platform:"youtube", id:"OfU6wuRjnAQ", note:"Composition originale pour contrebasse et glockenspiel.", sourceLabel:"youtube.com/@one4dabass2fordabow", sourceLink:"https://www.youtube.com/channel/UCWar7dj79rr1ufQ4HsZpFxw" },
@@ -737,7 +760,7 @@ function renderCategory(cat, mountId, countId){
   `).join("");
 }
 
-["releves-jazz","releves-classique","releves-rock","releves-autres","compos"].forEach(cat => {
+["releves-jazz","releves-classique","releves-rock","releves-autres","openings","compos"].forEach(cat => {
   renderCategory(cat, "list-" + cat, "count-" + cat);
 });
 
