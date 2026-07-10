@@ -2525,10 +2525,13 @@ function renderCarouselCategory(cat, mountId, countId){
     let lastArtist = null;
     st.items.forEach((s, i) => {
       if(groupByComposer){
-        const artistKey = s.artist || 'Artiste / titre à confirmer';
-        if(artistKey !== lastArtist){
-          html += `<h5 class="sab-artist">${artistKey}</h5>`;
-          lastArtist = artistKey;
+        if(s.artist){
+          if(s.artist !== lastArtist){
+            html += `<h5 class="sab-artist">${s.artist}</h5>`;
+            lastArtist = s.artist;
+          }
+        } else {
+          lastArtist = null;
         }
       }
       html += `<button class="sab-item" type="button" data-idx="${i}">
