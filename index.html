@@ -1649,7 +1649,12 @@ document.getElementById('year').textContent = new Date().getFullYear();
   const iframe = document.getElementById('gameIframe');
   const poster = document.getElementById('gamePoster');
   if(!overlay || !wrap) return;
+  // Lancer le jeu coupe toute musique/vidéo en cours sur le site
+  function stopSiteMedia(){
+    if(typeof pauseAllManagedMediaExcept === 'function') pauseAllManagedMediaExcept(iframe);
+  }
   function goFullscreen(){
+    stopSiteMedia();
     const el = iframe || wrap;
     const req = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen || el.msRequestFullscreen;
     if(req) req.call(el);
@@ -2237,7 +2242,7 @@ function pauseAllManagedMediaExcept(except){
   window.addEventListener('blur', function(){
     setTimeout(function(){
       const active = document.activeElement;
-      if(active && active.tagName === 'IFRAME' && active.classList.contains('managed-media')){
+      if(active && active.tagName === 'IFRAME' && (active.classList.contains('managed-media') || active.id === 'gameIframe')){
         pauseAllManagedMediaExcept(active);
       }
     }, 0);
