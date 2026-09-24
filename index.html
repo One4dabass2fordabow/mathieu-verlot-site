@@ -682,6 +682,15 @@
   .gal-sub{margin-bottom:3rem;}
   .gal-sub h3{font-family:'Fraunces',serif; font-size:1.5rem; margin:0 0 0.3rem; display:flex; align-items:baseline; gap:0.6rem; flex-wrap:wrap;}
   .gal-sub h3 .src{font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--string); text-transform:uppercase; letter-spacing:0.05em;}
+  .poeme{max-width:640px; margin:0 auto; text-align:center;}
+  .poeme-img{margin:0 0 1.4rem;}
+  .poeme-img img{width:100%; height:auto; display:block; border-radius:10px; box-shadow:0 8px 24px rgba(0,0,0,0.45);}
+  .poeme-titre{font-family:'Fraunces',serif; font-weight:600; font-size:1.6rem; color:var(--amber-bright); margin:0 0 0.2rem;}
+  .poeme-sous-titre{font-family:'Fraunces',serif; font-style:italic; color:var(--cream-dim); margin:0 0 1.6rem;}
+  .poeme-texte p{font-family:'Fraunces',serif; font-size:1.05rem; line-height:1.7; color:var(--cream); margin:0 0 1.3rem;}
+  .poeme-dedicace{font-family:'Fraunces',serif; font-style:italic; color:var(--cream-dim); margin:2rem 0 0.4rem;}
+  .poeme-signature{font-family:'JetBrains Mono',monospace; font-size:0.78rem; letter-spacing:0.05em; color:var(--string); margin:0;}
+  @media (max-width:600px){ .poeme-texte p{font-size:0.98rem;} .poeme-titre{font-size:1.35rem;} }
   .gal-sub > p.hint{color:var(--cream-dim); font-size:0.9rem; margin:0 0 1.2rem; max-width:60ch;}
 
   /* ---------- L'Action de la Basse (lecteur paginé) ---------- */
@@ -1144,6 +1153,7 @@
           <button type="button" class="qn-link" data-tab="creations" data-anchor="#creasub-animation" data-i18n="qn.animation">Animation</button>
           <button type="button" class="qn-link" data-tab="creations" data-anchor="#creasub-films" data-i18n="qn.films">Films</button>
           <button type="button" class="qn-link" data-tab="creations" data-anchor="#creasub-mrpc" data-i18n="qn.mrpc">Mr.Pc</button>
+          <button type="button" class="qn-link" data-tab="creations" data-anchor="#creasub-poemes" data-i18n="qn.poemes">Poèmes</button>
           <button type="button" class="qn-link" data-tab="boutique" data-i18n="qn.goodies">Goodies</button>
         </div>
       </div>
@@ -1367,6 +1377,25 @@
       <p class="hint" data-i18n-html="creations.mrpc.hint1"><em>Processeur d'aisée colle</em></p>
       <p class="hint" data-i18n="creations.mrpc.hint2">Les années Quarte vint</p>
       <div class="carousel-ia" id="grid-mrpc"></div>
+    </div>
+
+    <div class="gal-sub" id="creasub-poemes">
+      <h3><span data-i18n="creations.poemes.title">Poèmes</span></h3>
+      <article class="poeme" lang="fr">
+        <figure class="poeme-img"><img src="images/poemes/11-cepes-tendres.jpg" alt="Cercle de cèpes sur la mousse, au lever du soleil entre deux grands pins" loading="lazy"></figure>
+        <h4 class="poeme-titre">11 Cèpes tendres</h4>
+        <p class="poeme-sous-titre">Une journée cortinaire (Memento Morilles)</p>
+        <div class="poeme-texte">
+          <p>Au matin d'une forêt qui émergeait encore,<br>Les mûres (de Jéricho ?) se mettent à trembler,<br>Car se sont immiscées les trompettes des morts<br>Qui, psylo-sibyllines, altèrent réalité.</p>
+          <p>Le beau laid de Satan s'invite,<br>Et tout s'effondre et se transmute<br>En un lac-terr' sanguin-granit,<br>Dont rien ne peut freiner la chute.</p>
+          <p>La sève coulemellée de cris,<br>Les pins s'effondrent de stupeur<br>En un amas, champ pignons gris<br>Qui n'entrevoit d'autre couleur.</p>
+          <p>C'est la cueillette mortifère,<br>Mais pour la "pleurote": point de temps,<br>Et des héros de la clairière<br>Combattirent le satyre puant.</p>
+          <p>Ils furent trois mille dans la forêt,<br>Mais l'incendie se répandit<br>Le monde entier a chaviré<br>Ôtant chaque jour plus de vies.</p>
+          <p>Au Royaume des champis, y avait-il des véreux ?<br>Nous prend-on pour des truffes, en "péril gore", naïf ?<br>Destruction de "Mycènes", sombre présage des Dieux,<br>Reste-t-il de l'espoir, au crépuscule tardif ?</p>
+        </div>
+        <p class="poeme-dedicace">Paix et mémoire à tous les Innocents de par le Monde</p>
+        <p class="poeme-signature">Mathieu Verlot, 11 Septembre 2026</p>
+      </article>
     </div>
   </section>
 
@@ -2281,7 +2310,8 @@ const I18N = {
     "qn.jazz":"Jazz","qn.rock":"Rock","qn.classique":"Classique","qn.autres":"Autres",
     "qn.compos":"Compos","qn.openings":"Openings","qn.hiphop":"Hip Hop","qn.live":"Live","qn.jeu":"Jeu","qn.dbquest":"D.B Quest",
     "qn.creations":"Créations Visuelles","qn.action":"L'Action de la Basse","qn.bd":"Bande dessinée",
-    "qn.animation":"Animation","qn.films":"Films","qn.mrpc":"Mr.Pc","qn.goodies":"Goodies",
+    "qn.animation":"Animation","qn.films":"Films","qn.mrpc":"Mr.Pc","qn.poemes":"Poèmes","qn.goodies":"Goodies",
+    "creations.poemes.title":"Poèmes",
     "panel.jazz.sub":"Relevés jazz depuis 2012","panel.rock.sub":"On fend la basse en deux",
     "panel.classique.sub":"Chant/ Contre chant ","panel.compos.sub":"Compositions et pièces originales",
     "panel.openings.sub":"Génériques et thèmes d'ouverture — anime, séries, films — transcrits pour ensemble de contrebasses, enregistré solo sans editing et dans les conditions du live.",
@@ -2326,7 +2356,8 @@ const I18N = {
     "qn.jazz":"Jazz","qn.rock":"Rock","qn.classique":"Classical","qn.autres":"Other",
     "qn.compos":"Compositions","qn.openings":"Openings","qn.hiphop":"Hip-Hop","qn.live":"Live","qn.jeu":"Game","qn.dbquest":"D.B Quest",
     "qn.creations":"Visual Creations","qn.action":"The Bass Action","qn.bd":"Comics",
-    "qn.animation":"Animation","qn.films":"Films","qn.mrpc":"Mr.Pc","qn.goodies":"Goodies",
+    "qn.animation":"Animation","qn.films":"Films","qn.mrpc":"Mr.Pc","qn.poemes":"Poems","qn.goodies":"Goodies",
+    "creations.poemes.title":"Poems",
     "panel.jazz.sub":"Jazz transcriptions since 2012","panel.rock.sub":"Splitting the bass in two",
     "panel.classique.sub":"Melody / Countermelody ","panel.compos.sub":"Original compositions and pieces",
     "panel.openings.sub":"Opening themes and credits — anime, series, films — transcribed for double bass ensemble, recorded solo with no editing and under live conditions.",
